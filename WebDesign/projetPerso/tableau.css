@@ -1,0 +1,44 @@
+
+td,th /* Toutes les cellules des tableaux... */
+{
+    border: 1px solid black; /* ... auront une bordure de 1px */
+    padding: 10px;             /* Espace à l'intérieur des cellules */
+    text-align: left;          /* Alignement du texte à gauche */
+}
+
+
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Style de base des tableaux */
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse; /* Aligne les bordures entre elles */
+    margin-bottom: 30px;
+}
+
+/* Titre du tableau */
+caption {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+
+
+/* Couleur de fond légère pour les en-têtes */
+th {
+    background-color: #023b57;
+    font-weight: bold;
+    color: white;
+}
+td{
+    background: #ddd;
+}

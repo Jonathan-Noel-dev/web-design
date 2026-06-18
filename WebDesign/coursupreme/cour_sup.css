@@ -1,0 +1,91 @@
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+ul{
+    list-style: none;
+}
+select{
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+}
+.mx-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0, 207, 79); */
+    background-color: #a2a5a2;
+    min-height: 130px;
+}
+.mx-2:hover{
+    background-color: rgb(0, 207, 79);
+}
+a:hover{
+    color: white;
+}
+/* Désactive l'animation slide de Bootstrap */
+.carousel-item {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+/* Slide qui ENTRE : part de petite taille → taille normale */
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+/* Slide qui SORT : reste grande mais passe derrière */
+.carousel-item-prev,
+.carousel-item-next {
+    opacity: 0.4;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  color: black;
+  padding: 10px 24px;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.415);
+
+
+  /* État initial : petit et invisible (même animation que l'image) */
+  opacity: 0;
+  transform: scale(0.5);
+  transform-origin: bottom left; /* zoom part du coin bas-gauche */
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  transition-delay: 0s; /* pas de délai par défaut */
+}
+
+/* Quand la slide est active → le texte zoom et apparaît après 1s */
+.carousel-item.active .slide-caption {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 1s; /* attend 1s après l'image */
+}
+.zone-verte{
+    background-color: green;
+    height:50px;
+    width: 30%;
+    color: #a2a5a2;
+}
+span{
+    color: black;
+    font-weight: bold;
+}
+#espace{
+    background-color:#a2a5a2;
+    height: 70px;
+
+}
+#drapeau, #vert, #jaune, #rouge{
+    height: 20px;
+}

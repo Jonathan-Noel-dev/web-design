@@ -1,0 +1,37 @@
+Dr Matine OUSMANE
+matines1@gmail.com
+0197210388
+
+Introduction
+*URL   (identification unique d'un lieu)
+*domaine (L'endroit à identifier)
+*Portable
+
+HTML
+CSS
+Boostrap
+Wordpress
+Joomla
+Graphisme
+
+HTML: Hypperte
+X-HTML: Nom des balise en minuscule,fermer les balise
+
+**code
+     <img src="search.jpeg" />
+    <dl>
+        <dt>mot</dt>
+        <dd>description</dd>
+    </dl>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+    </ul>
+    <ol>
+        <li>a</li>
+        <li>b</li>
+    </ol>
+**
+responsive
+template
+disposition(mise en boite)

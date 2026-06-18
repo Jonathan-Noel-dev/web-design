@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre projet de Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top p-3" style="background-color: #211147;">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand fw-bold" href="index.html">Formation Bootstrap</a>
+            
+            <button class="navbar-toggler" data-bs-target="#burger" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="burger">
+                <div class="navbar-nav gap-3">
+                    <a class="nav-link text-white" href="document.html">Cours</a>
+                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="p-5 text-center text-md-start" style="background-color: #f4f0fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h1 class="display-5 fw-bold">Apprenez <span style="color: #6f42c1;">Bootstrap</span> facilement</h1>
+                    <p class="lead text-muted">Bootstrap est le framework CSS le plus populaire pour créer des sites web responsives et modernes. Il existe plusieurs templates aidant dans la rapidité des projets</p>
+                    <style>
+                        .btn-scale{transition:  transform O.6s ease-in-out;}
+                        .btn-scale:hover{transform: scale(1.1);}
+                        .btn-scale:active{transform: scale(0.95);}
+                        .animate{
+                            animation-name: attire;
+                            animation-duration: 1s;
+                            animation-iteration-count: infinite;
+                        }
+                        @keyframes attire {
+                            0%{transform: scale(1);}
+                            100%{transform: scale(1.1);}
+                        }
+                    </style>
+                    <button class="btn text-white me-2 mb-2 btn-scale animate" style="background-color: #6f42c1;"><a href="document.html" class="text-white text-decoration-none ">Commencer la formation</a></button>
+                    <button class="btn btn-outline-warning"><a class="text-decoration-none fs-6 " href="https://getbootstrap.com/docs/5.3/examples/">Voir les exemples de templates</a></button>
+                </div>
+                <div class="col-md-5 text-center mt-4 mt-md-0">
+                    <div class="display-1 fw-bold text-white d-inline-block p-4 rounded shadow" style="background-color: #211147; width: 120px;">B</div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <section class="container my-5 text-center" id="cour">
+        <h2 class="fw-bold mb-4">5. La boîte à outils Bootstrap</h2>
+        <div class="row row-cols-2 row-cols-md-5 g-3">
+            <div class="col">
+                <i class="bi bi-palette display-6" style="color: #6f42c1;"></i>
+                <h5 class="fw-bold mt-2">Couleurs</h5>
+                <p class="text-muted small">Système prêt à l'emploi.</p>
+            </div>
+            <div class="col">
+                <i class="bi bi-type display-6" style="color: #6f42c1;"></i>
+                <h5 class="fw-bold mt-2">Typographie</h5>
+                <p class="text-muted small">Styles de texte lisibles.</p>
+            </div>
+            <div class="col">
+                <i class="bi bi-grid-3x3-gap display-6" style="color: #6f42c1;"></i>
+                <h5 class="fw-bold mt-2">Grille</h5>
+                <p class="text-muted small">Système responsive puissant.</p>
+            </div>
+            <div class="col">
+                <i class="bi bi-card-text display-6" style="color: #6f42c1;"></i>
+                <h5 class="fw-bold mt-2">Composants</h5>
+                <p class="text-muted small">Boutons, cartes, navbars...</p>
+       
+         </div>
+            <div class="col">
+                <i class="bi bi-lightning display-6" style="color: #6f42c1;"></i>
+                <h5 class="fw-bold mt-2">Utilitaires</h5>
+                <p class="text-muted small">Classes pour gagner du temps.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="row align-items-center">
+           <div class="col-md-6 text-center">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80" 
+                alt="Mockup Écran PC" 
+                class="img-fluid rounded shadow-sm">
+         </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <h2 class="fw-bold" style="color: #6f42c1;">6. Templates et charte graphique</h2>
+                <p class="text-muted">Bootstrap propose des thèmes cohérents pour créer des sites professionnels rapidement.</p>
+                <div class="d-flex gap-2">
+                    <span class="rounded-circle" style="width:25px; height:25px; background:#3b2463; display:inline-block;"></span>
+                    <span class="rounded-circle" style="width:25px; height:25px; background:#211147; display:inline-block;"></span>
+                    <span class="rounded-circle" style="width:25px; height:25px; background:#3a9151; display:inline-block;"></span>
+                    <span class="rounded-circle" style="width:25px; height:25px; background:#ffc107; display:inline-block;"></span>
+                    <span class="rounded-circle" style="width:25px; height:25px; background:#dc3545; display:inline-block;"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 text-center">
+        <h2 class="fw-bold mb-4">7. La grille responsive en action</h2>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="border p-4 rounded bg-white shadow-sm">
+                    <i class="bi bi-laptop display-6" style="color: #6f42c1;"></i>
+                    <h5 class="fw-bold mt-2">Mobile First</h5>
+                    <p class="text-muted small">Conçu pour s'adapter à tous les écrans.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border p-4 rounded bg-white shadow-sm">
+                    <i class="bi bi-grid display-6" style="color: #6f42c1;"></i>
+                    <h5 class="fw-bold mt-2">Grille 12 colonnes</h5>
+                    <p class="text-muted small">Organisez votre contenu facilement.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border p-4 rounded bg-white shadow-sm">
+                    <i class="bi bi-phone display-6" style="color: #6f42c1;"></i>
+                    <h5 class="fw-bold mt-2">100% Responsive</h5>
+                    <p class="text-muted small">Beau sur mobile, tablette et PC.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        img{
+            transition: all 1s ease;
+        }
+        img:hover{
+            transform: scale(1.1);
+            border-radius: 5px;
+            
+        }
+        .btnsect{
+            transition: all 1s ease;
+            background-color: #6f42c1;
+            color: white;
+        }
+        .btnsect:hover{
+            background: white;
+            color:#6f42c1;
+            border: solid 1px #6f42c1;
+        }
+    </style>
+    <section class="container my-5" id="cours">
+        <h2 class="fw-bold text-center mb-4">8. La mise en boîte</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <img class="imgsect" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=600&h=350&q=80" 
+                         class="card-img-top img-fluid" 
+                         alt="Code informatique HTML et CSS"
+                         style="object-fit: cover; height: 180px;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold">Composants en boîte</h5>
+                            <p class="card-text text-muted small">Utilisez les cartes pour structurer vos contenus.</p>
+                        </div>
+                        <a href="document.html" class="btn btn-sm  w-100 mt-3 btnsect">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <img class="imgsect" src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&h=350&q=80" 
+                         class="card-img-top img-fluid" 
+                         alt="Développeur travaillant sur un ordinateur"
+                         style="object-fit: cover; height: 180px;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold">Cartes et ombres</h5>
+                            <p class="card-text text-muted small">Donnez du relief à vos éléments graphiques.</p>
+                        </div>
+                        <a href="document.html" class="btn btn-sm  w-100 mt-3 btnsect">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
+                    <img class="imgsect" src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=600&h=350&q=80" 
+                         class="card-img-top img-fluid" 
+                         alt="Espace de travail bureau propre informatique"
+                         style="object-fit: cover; height: 180px;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fw-bold">Espacements</h5>
+                            <p class="card-text text-muted small">Gérez facilement vos marges intérieures et extérieures.</p>
+                        </div>
+                        <a href="document.html" class="btn btn-sm  w-100 mt-3 btnsect">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 text-center">
+        <h2 class="fw-bold mb-4">9. Positionnement des éléments</h2>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="p-3 border rounded bg-light">
+                    <h6 class="fw-bold">Sticky</h6>
+                    <small class="text-muted">Éléments collés (ex: navbar)</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 border rounded bg-light">
+                    <h6 class="fw-bold">Centré</h6>
+                    <small class="text-muted">Milieu horizontal et vertical</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 border rounded bg-light" >
+                    <h6 class="fw-bold">Superposé</h6>
+                    <small class="text-muted">Position relative et absolue</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <a href="pratique.html" class="btn animate" style="background:#6f42c1;color: white;">Petite pratique pour les camarades</a>
+    </div>
+    <footer class="text-white py-4 mt-5" style="background-color: #211147;" id="contact">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5>Formation Bootstrap</h5>
+                    <p class="small text-white-50">Apprenez à créer des sites web modernes et responsives.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small text-white-50">© 2026 Formation Bootstrap - Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   <script src="js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>

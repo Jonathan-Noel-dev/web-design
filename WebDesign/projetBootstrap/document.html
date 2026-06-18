@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top p-3" style="background-color: #211147;">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand fw-bold" href="index.html">Formation Bootstrap</a>
+            
+            <button class="navbar-toggler" data-bs-target="#burger" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="burger">
+                <div class="navbar-nav gap-3">
+                    <a class="nav-link text-white" href="#cour">Cours</a>
+                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex justify-content-center align-items-center vh-100" style="background-image: url(images/plan.png);">
+        <div class="card p-2 shadow-sm" style="width: 18rem;">
+            <img src="images/appercu.png" class="card-img-top" alt="Aperçu du cours Bootstrap" style="height: 15rem;">
+            
+            <div class="card-body text-center">
+                <h5 class="card-title">Cours Complet Bootstrap</h5>
+                <p class="card-text text-muted small">Téléchargez le support de cours officiel de la formation au format PDF.</p>
+                
+                <a href="Expose_Bootstrap.pdf" download="cours_bootstrap.pdf" class="btn btn-primary w-100">
+                    Télécharger (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white py-4" style="background-color: #211147;" id="contact">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5>Formation Bootstrap</h5>
+                    <p class="small text-white-50">Apprenez à créer des sites web modernes et responsives.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small text-white-50">© 2026 Formation Bootstrap - Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

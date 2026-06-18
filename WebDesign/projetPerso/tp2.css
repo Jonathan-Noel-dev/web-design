@@ -1,0 +1,86 @@
+/* Style général de la page */
+body {
+    color: #222222; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Verdana, sans-serif;
+    background: #ffffff url('images/fond.png') no-repeat right center fixed;
+    line-height: 1.5; 
+    margin: 20px;
+}
+
+/* Titres */
+h1 {
+    text-align: center;
+    color: #d63384; 
+    font-size: 1.8rem; 
+    margin-bottom: 20px;
+}
+
+/* Paragraphes */
+p {
+    font-size: 16px;
+    color: white;
+}
+
+/* Liens */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Classes utilitaires de mise en forme */
+.gras {
+    font-weight: bold;
+}
+
+.italique {
+    font-style: italic;
+}
+
+.majuscules {
+    text-transform: uppercase;
+}
+
+/* Espacements */
+.interligne {
+    line-height: 2;
+}
+
+.ecart {
+    letter-spacing: 0.2em;
+}
+
+.rapproch {
+    letter-spacing: -1px;
+}
+
+.ecartM {
+    word-spacing: 0.4em;
+}
+
+.rapprochM {
+    word-spacing: -2px;
+}
+
+/* Bordures et blocs */
+.bordure {
+    width: 10em;
+    border-right: 2px solid #dc3545; 
+    padding-right: 10px;
+}
+
+/* Conteneur global */
+div#global {
+    width: 100%;
+    max-width: 400px; 
+    min-height: 200px; 
+    background-color: #fff9db;
+    background-image: url('images/fond.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding: 15px;
+    border-radius: 4px;
+}

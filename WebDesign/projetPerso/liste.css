@@ -1,0 +1,218 @@
+.pas_de_retrait{
+    list-style-position: inside;
+}
+.retrait{
+    list-style-position:
+outside;
+}
+
+.cercle{
+    list-style-type: circle;
+}
+.carre{
+    list-style-type: square;
+}
+.rien{
+    list-style-type: none;
+}
+
+.commence_a_zero{
+list-style-type: decimal-leading-zero;
+}
+.lettres_minuscules{
+    list-style-type: lower-alpha;
+}
+.chiffres_romains{
+    list-style-type: upper-roman;
+}
+.lettres_grecques{
+    list-style-type: lower-greek;
+}
+ul /* Ma liste aura des puces en forme de dossiers */{
+list-style-image: url("dossier.png");
+}
+/* Juste pour améliorer la présentation : */
+a{
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+p{
+    width: 50%;
+    text-align: justify; /* Texte justifié pour mieux voir la largeur du block */
+}
+
+p /* Tous les paragraphes auront ces propriétés CSS */{
+    width: 250px;
+    height: 100px;
+    text-align: justify;
+}/* Et chacun des paragraphes aura en plus une valeur d'overflow différente */
+.coupe{
+    overflow: hidden;
+}
+.barres_defilement{
+    overflow: scroll;
+}
+.auto{
+    overflow: auto;
+}
+.commence_a_zero
+{
+list-style-type: decimal-leading-zero;
+}
+.lettres_minuscules
+{
+list-style-type: lower-alpha;
+}
+.chiffres_romains
+{
+list-style-type: upper-roman;
+}
+.lettres_grecques
+{
+list-style-type: lower-greek;
+}
+/* Quelques styles supplémentaires juste pour la présentation
+En plus ça vous fait quelques rappels ;o) */
+h2
+{
+text-indent: 20px;
+font-family: Arial, Verdana, "Times New Roman", serif;
+}
+em
+{
+background-color: yellow;
+}
+strong
+{
+color: red;
+}
+
+
+
+/* ==========================================
+   STYLE GÉNÉRAL ET DESIGN DE LA PAGE
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7fafc;
+    color: #2d3748;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #2b6cb0;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+p {
+    font-weight: 500;
+    color: #4a5568;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* Style pour mettre en valeur les balises citées dans le texte (em, strong) */
+p em, p strong {
+    background-color: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e53e3e;
+    font-style: normal;
+}
+
+/* Container global fictif pour espacer proprement chaque exemple */
+ul, ol, dl {
+    background: #ffffff;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ==========================================
+   DESIGN DES LISTES DE DÉFINITIONS (<dl>)
+   ========================================== */
+dl {
+    padding: 20px;
+}
+
+dt {
+    font-weight: bold;
+    color: #2c5282;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #4a5568;
+    font-style: italic;
+    border-left: 3px solid #cbd5e0;
+    padding-left: 10px;
+}
+
+/* ==========================================
+   GESTION DES RETRAITS (CLASSES HTML)
+   ========================================== */
+ul.retrait {
+    /* Garde le comportement avec retrait par défaut de la structure */
+    padding-left: 40px; 
+}
+
+ul.pas_de_retrait {
+    /* Supprime le décalage vers la droite */
+    padding-left: 15px; 
+    list-style-position: inside; /* Aligne la puce tout à gauche avec le texte */
+}
+
+/* ==========================================
+   STYLISATION DES LISTES NON ORDONNÉES (ul)
+   ========================================== */
+ul.cercle {
+    list-style-type: circle;
+}
+
+ul.carre {
+    list-style-type: square;
+}
+
+ul.rien {
+    list-style-type: none;
+    padding-left: 20px; /* Réduit l'espace vide vu qu'il n'y a plus de puces */
+}
+
+/* ==========================================
+   STYLISATION DES LISTES ORDONNÉES (ol)
+   ========================================== */
+ol.commence_a_zero {
+    list-style-type: decimal-leading-zero;
+}
+
+ol.lettres_minuscules {
+    list-style-type: lower-alpha;
+}
+
+ol.chiffres_romains {
+    list-style-type: upper-roman;
+}
+
+ol.lettres_grecques {
+    list-style-type: lower-greek;
+}

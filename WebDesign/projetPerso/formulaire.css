@@ -1,0 +1,165 @@
+/* ==========================================
+   STYLE GÉNÉRAL ET TYPOGRAPHIE
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Paragraphes de texte (hors formulaires) */
+body > p {
+    font-weight: 600;
+    color: #4a5568;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-left: 4px solid #3182ce;
+    padding-left: 10px;
+}
+
+/* ==========================================
+   DESIGN DES FORMULAIRES
+   ========================================== */
+form {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+/* Paragraphes internes aux formulaires */
+form p {
+    margin: 12px 0;
+}
+
+/* En-têtes et textes informatifs internes */
+form p:first-child {
+    font-weight: 500;
+    color: #2d3748;
+}
+
+/* ==========================================
+   CHAMPS DE SAISIE (TEXTE, PASSWORD, SELECT, TEXTAREA)
+   ========================================== */
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Effet au clic/focus sur les champs */
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+    outline: none;
+}
+
+/* Ajustement spécifique pour les zones de texte */
+textarea {
+    min-height: 80px;
+    resize: vertical; /* Permet à l'étudiant d'agrandir verticalement */
+}
+
+/* ==========================================
+   LABELS, CASES À COCHER ET BOUTONS RADIO
+   ========================================== */
+label {
+    font-weight: 600;
+    color: #4a5568;
+}
+
+/* Alignement des cases à cocher et boutons radio */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+    transform: scale(1.1); /* Rend les cases légèrement plus visibles */
+    vertical-align: middle;
+}
+
+/* Ajustement des labels placés juste après une case/un radio */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    font-weight: normal;
+    color: #2d3748;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* ==========================================
+   FIELDSET ET LEGEND (ORGANISATION)
+   ========================================== */
+fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: #f8fafc;
+}
+
+legend {
+    font-weight: bold;
+    color: #2b6cb0;
+    background: #fff;
+    padding: 2px 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ==========================================
+   BOUTONS DE SOUUMISSION (SUBMIT / RESET)
+   ========================================== */
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 10px;
+    border: none;
+}
+
+/* Bouton Envoyer (Principal) */
+input[type="submit"] {
+    background-color: #3182ce;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #2b6cb0;
+}
+
+/* Bouton Annuler/Reset (Secondaire) */
+input[type="reset"] {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+input[type="reset"]:hover {
+    background-color: #cbd5e0;
+}

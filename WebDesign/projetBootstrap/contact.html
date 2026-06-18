@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Formation Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand navbar-dark sticky-top p-3" style="background-color: #211147;">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand fw-bold" href="index.html">Formation Bootstrap</a>
+            
+            <div class="navbar-nav gap-3">
+                <a class="nav-link text-white" href="document.html">Cours</a>
+                <a class="nav-link text-white" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5" style="max-width: 600px;">
+        
+        <div class="text-center mb-4">
+            <h2 class="fw-bold" style="color: #6f42c1;">Contacte l'équipe !</h2>
+            <p class="text-muted">Une question sur la formation Bootstrap ? Remplis ce formulaire, on te répond rapidement.</p>
+        </div>
+        <div id="statusMessage"></div>
+        <div class="card p-4 shadow-sm border-0">
+            <form id="monFormulaire">
+                
+                <div class="mb-3">
+                    <label for="nom" class="form-label fw-bold">Nom et Prénom</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Ex: Jean Dupont" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="mail" class="form-label fw-bold">Adresse Email</label>
+                    <input type="email" class="form-control" id="mail" placeholder="Ex: jean.dupont@email.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="objet" class="form-label fw-bold">Quel est l'objet de ton message ?</label>
+                    <select class="form-select" id="objet" required>
+                        <option value="" selected disabled>Choisis une option...</option>
+                        <option value="inscription">Je veux m'inscrire à la formation</option>
+                        <option value="aide">J'ai besoin d'aide sur un cours (HTML/CSS)</option>
+                        <option value="bug">J'ai trouvé un bug sur le site</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="form-label fw-bold">Ton message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Écris ton message ici..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn text-white w-100 fw-bold" id="btn" style="background-color: #6f42c1;">
+                    Envoyer le message
+                </button>
+        </form>
+    </div>
+    <script>
+    // 2. INITIALISATION D'EMAILJS AVEC TA CLÉ PUBLIQUE
+        emailjs.init('pE4nWNP4Lhs5ch3xW');
+
+        const formulaire = document.getElementById('monFormulaire');
+        const bouton = document.getElementById('btn');
+        const statusMessage = document.getElementById('statusMessage');
+
+        formulaire.addEventListener('submit', function(event) {
+            event.preventDefault(); // Bloque le rechargement de la page
+
+            // Changement visuel du bouton pendant l'envoi
+            bouton.disabled = true;
+            bouton.innerText = "Envoi en cours...";
+
+            // Récupération des données du formulaire
+            let nom = document.getElementById('nom').value;
+            let mail = document.getElementById('mail').value;
+            let objet = document.getElementById('objet').value;
+            let message = document.getElementById('message').value;
+
+            // Préparation des variables pour ton template EmailJS
+            let parametresTemplate = {
+                user_nom: nom,
+                user_mail: mail,
+                user_objet: objet,
+                user_message: message
+            };
+           
+            // 3. ENVOI DE L'EMAIL EN ARRIÈRE-PLAN
+            emailjs.send('service_5u4auka', 'template_0ylnp7r', parametresTemplate)
+                .then(function(response) {
+                    // Si l'envoi réussit :
+                    statusMessage.innerHTML = `
+                        <div class="alert alert-success border-0 shadow-sm mb-4" role="alert">
+                            ✨ Super ! Ton message a été envoyé avec succès en arrière-plan.
+                        </div>
+                    `;
+                    //formulaire.reset(); // On vide le formulaire
+                }, function(error) {
+                    // Si l'envoi échoue :
+                    statusMessage.innerHTML = `
+                        <div class="alert alert-danger border-0 shadow-sm mb-4" role="alert">
+                            ❌ Erreur lors de l'envoi. Réessaye plus tard.
+                        </div>
+                    `;
+                    console.log("Détail de l'erreur :", error);
+                })
+                .finally(function() {
+                    // On remet le bouton à son état normal à la fin
+                    bouton.disabled = false;
+                    bouton.innerText = "Envoyer le message";
+                });
+        });
+    </script>
+        <div class="text-center mt-4">
+            <a href="index.html" class="text-decoration-none small text-secondary">← Retour à l'accueil</a>
+        </div>
+
+    </div>
+    <footer class="text-white py-4 mt-5" style="background-color: #211147;" id="contact">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5>Formation Bootstrap</h5>
+                    <p class="small text-white-50">Apprenez à créer des sites web modernes et responsives.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small text-white-50">© 2026 Formation Bootstrap - Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
